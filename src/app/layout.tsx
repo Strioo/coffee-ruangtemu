@@ -5,6 +5,9 @@ import { Header } from "@/components/layout/Header";
 import { MobileBottomNavigation } from "@/components/layout/MobileBottomNavigation";
 import "./globals.css";
 
+const deploymentHost = process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_URL;
+const metadataBase = new URL(deploymentHost ? `https://${deploymentHost}` : "http://localhost:3000");
+
 const archivoNarrow = Archivo_Narrow({
   subsets: ["latin"],
   variable: "--font-heading",
@@ -17,6 +20,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
+  metadataBase,
   title: "ruang temu | Coffee & Space",
   description: "Ruang untuk menikmati kopi, bekerja, dan bertemu dalam suasana tenang.",
   applicationName: "ruang temu",
@@ -26,6 +30,11 @@ export const metadata: Metadata = {
     locale: "id_ID",
     siteName: "ruang temu",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ruang temu | Coffee & Space",
+    description: "Ruang untuk menikmati kopi, bekerja, dan bertemu dalam suasana tenang.",
   },
 };
 
