@@ -1,0 +1,59 @@
+# Dependencies
+/node_modules/
+/.pnp/
+.pnp.*
+
+# Next.js and production output
+/.next/
+/out/
+/build/
+
+# Local project material and reports
+/reference/
+/docs/
+/lighthouse/
+/coverage/
+
+# Local environment files
+.env*
+!.env.example
+
+# TypeScript and tool caches
+*.tsbuildinfo
+next-env.d.ts
+/.turbo/
+/.cache/
+/.eslintcache
+
+# Editor settings and local history
+/.history/
+/.vscode/
+/.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local deployment metadata
+/.vercel/
+/.netlify/
+
+# Test and temporary output
+/test-results/
+/playwright-report/
+/blob-report/
+/tmp/
+/temp/
+
+# OS and sensitive local files
+.DS_Store
+Thumbs.db
+*.pem
+*.key
+*.crt
